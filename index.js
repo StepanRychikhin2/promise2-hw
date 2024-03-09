@@ -1,30 +1,30 @@
 
-// const arr = [
-//     delayedPromise("1", 1000),
-//     delayedPromise("2", 2000),
-//     delayedPromise("3", 1500),
-//     delayedPromise("4", 3000),
-//     delayedPromise("5", 500),
-// ];
+const arr = [
+    delayedPromise("1", 1000),
+    delayedPromise("2", 2000),
+    delayedPromise("3", 1500),
+    delayedPromise("4", 3000),
+    delayedPromise("5", 500),
+];
 
 
-// function delayedPromise(value, time) {
-//     return new Promise((resolve) => {
-//         setTimeout(() => {
-//             resolve(value);
-//         }, time);
-//     });
-// }
+function delayedPromise(value, time) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(value);
+        }, time);
+    });
+}
 
 
 
-// Promise.all(arr)
-//     .then((ee) => {
-//         console.log(ee.join(" "));
-//     })
-//     .catch((error) => {
-//         console.error(error);
-//     });
+Promise.all(arr)
+    .then((ee) => {
+        console.log(ee.join(" "));
+    })
+    .catch((error) => {
+        console.error(error);
+    });
 
 
 
@@ -34,7 +34,7 @@
         return new Promise((resolve) => {
             setTimeout(()=> {
                 resolve(value)
-                console.log(randomTime)
+                console.log(randomTime);
             }, randomTime)
         })
       
